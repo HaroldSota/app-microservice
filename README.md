@@ -10,7 +10,7 @@ In order to scale from clean arthitecture to a microservice arthitecture the fol
 5. Moved the mapping for persistence entities in DBContext
 6. Added caching for query in external services 
 7. Added Swagger for manual testing
-
+8. Decided to mantain the interfaces for the external services and configuration to not lose in coding style.
 
 # The app desing
  The project has 4 abstract layers: api, domain, external serices and persistence.
