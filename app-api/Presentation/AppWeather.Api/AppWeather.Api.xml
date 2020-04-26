@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AppWeather.Api</name>
+    </assembly>
+    <members>
+        <member name="T:AppWeather.Api.Controllers.PlacesController">
+            <summary>
+                Routs the request to 'Google Place Autocomplete' 
+            </summary>
+        </member>
+        <member name="M:AppWeather.Api.Controllers.PlacesController.Get(System.String)">
+            <summary>
+               Get Suggestion  
+            </summary>
+            <param name="cityName">Provide the seatch text</param>
+            <returns>Return a list of suggestions</returns>
+        </member>
+        <member name="T:AppWeather.Api.Controllers.SearchHistoryController">
+            <summary>
+                Routs the request to 'User Search' 
+            </summary>
+        </member>
+        <member name="M:AppWeather.Api.Controllers.SearchHistoryController.GetLast(System.Int32)">
+            <summary>
+               Get last five searches by the user
+            </summary>
+            <returns>Return a list of suggestions</returns>
+        </member>
+        <member name="M:AppWeather.Api.Controllers.SearchHistoryController.GetAll">
+            <summary>
+               Get last five searches by the user
+            </summary>
+            <returns>Return a list of suggestions</returns>
+        </member>
+        <member name="T:AppWeather.Api.Controllers.WeatherController">
+            <summary>
+                Wather forcast api
+            </summary>
+        </member>
+        <member name="M:AppWeather.Api.Framework.Controllers.BaseApiController.#ctor(AppWeather.Core.Messaging.IBus)">
+            <summary>
+                BaseApiController ctor.
+            </summary>
+            <param name="bus">Cmd. transportation buss</param>
+        </member>
+        <member name="M:AppWeather.Api.Framework.Controllers.BaseApiController.ToResult``1(AppWeather.Core.Messaging.Queries.QueryResponse{``0})">
+            <summary>
+                Formats the response status to be sent to th client
+            </summary>
+            <typeparam name="TQueryResult">The result object type</typeparam>
+            <param name="response">the wrapper of the result object</param>
+            <returns></returns>
+        </member>
+        <member name="M:AppWeather.Api.Framework.Infrastructure.Extensions.ApplicationBuilderExtensions.UseAppSwagger(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+              Configure Swagger
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="M:AppWeather.Api.Framework.Infrastructure.Extensions.ServiceCollectionExtensions.AddAppSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+                Configure Swagger
+            </summary>
+            <param name="services">Collection of service descriptors</param>
+        </member>
+    </members>
+</doc>
