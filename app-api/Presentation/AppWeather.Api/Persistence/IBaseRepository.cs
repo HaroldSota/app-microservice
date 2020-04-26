@@ -1,4 +1,4 @@
-﻿using AppWeather.Api.Domain.BaseModel;
+﻿using AppWeather.Api.Domain;
 
 namespace AppWeather.Api.Persistence
 {

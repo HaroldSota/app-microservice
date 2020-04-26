@@ -1,4 +1,4 @@
-﻿using AppWeather.Api.Domain.BaseModel;
+﻿using AppWeather.Api.Domain;
 using AppWeather.Api.Framework;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;

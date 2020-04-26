@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AppWeather.Api.Domain.BaseModel
+namespace AppWeather.Api.Domain
 {
     /// <summary>
     ///     Base class for domain entities
