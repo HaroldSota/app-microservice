@@ -22,9 +22,6 @@ namespace AppWeather.Tests.Integration
             Seed();
         }
 
-
-        #region [ Test forecast by city name ]
-
         [Fact]
         public async Task Get_Forecast_Provides_Locality_Weather_forecast()
         {
@@ -157,10 +154,6 @@ namespace AppWeather.Tests.Integration
             GetLastSearch().CityName.Should().NotBe("aaabc");
         }
 
-        #endregion
-
-        #region [ Test forecast by zip code ]
-
         [Fact]
         public async Task Get_Forecast_Provides_ZipCode_Weather_Forecast()
         {
@@ -230,10 +223,6 @@ namespace AppWeather.Tests.Integration
 
         }
 
-        #endregion
-
-        #region [ Test forecast by GeoCode ]
-
         [Fact]
         public async Task Get_Forecast_Provides_Coordinate_Weather_Forecast()
         {
@@ -297,9 +286,7 @@ namespace AppWeather.Tests.Integration
             result.Message.Should().Be("Error: GeoCode is null or empty!");
         }
 
-        #endregion
 
-        #region [ Utilities ]
 
         private UserSearchData GetLastSearch() =>
             TestDbContext.DbContext.Set<UserSearchData>().OrderByDescending(item => item.SearchTime).FirstOrDefault();
@@ -322,6 +309,5 @@ namespace AppWeather.Tests.Integration
 
             TestDbContext.DbContext.SaveChanges();
         }
-        #endregion
-    }
+ }
 }
