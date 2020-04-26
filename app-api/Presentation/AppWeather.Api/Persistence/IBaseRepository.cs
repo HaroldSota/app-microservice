@@ -3,7 +3,7 @@
 namespace AppWeather.Api.Persistence
 {
     /// <summary>
-    /// Represents an entity repository
+    ///     Represents an entity repository
     /// </summary>
     /// <typeparam name="TEntity">Entity type</typeparam>
     /// <typeparam name="TData">Data type</typeparam>

@@ -6,6 +6,7 @@ using AppWeather.Tests.Infrastructure;
 using FluentAssertions;
 using System;
 using System.Linq;
+using AppWeather.Api.Persistence.Model.UserSearch;
 using Xunit;
 
 namespace AppWeather.Tests.Persistence
@@ -25,9 +26,9 @@ namespace AppWeather.Tests.Persistence
         public void Test_Add_New_Item_In_Repository()
         {
             //Act
-            IUserSearchRepository useerRepository = EngineContext.Current.Resolve<IUserSearchRepository>();
+            IUserSearchRepository userRepository = EngineContext.Current.Resolve<IUserSearchRepository>();
             var user = new UserSearch(Guid.NewGuid().ToString(), "Leipzig", 13.3f, 69, DateTime.Now);
-            useerRepository.Add(user);
+            userRepository.Add(user);
 
 
             //Assert

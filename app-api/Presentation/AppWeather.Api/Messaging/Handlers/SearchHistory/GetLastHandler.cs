@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using AppWeather.Api.Persistence.Model.UserSearch;
 
 namespace AppWeather.Api.Messaging.Handlers.SearchHistory
 {

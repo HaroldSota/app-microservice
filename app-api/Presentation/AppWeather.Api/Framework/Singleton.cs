@@ -9,7 +9,7 @@ namespace AppWeather.Api.Framework
     /// <typeparam name="T">The type of object to store</typeparam>
     public static class Singleton<T>
     {
-        private static T instance;
+        private static T _instance;
 
         private static IDictionary<Type, object> AllSingletons { get; }
 
@@ -20,10 +20,10 @@ namespace AppWeather.Api.Framework
 
         public static T Instance
         {
-            get => instance;
+            get => _instance;
             set
             {
-                instance = value;
+                _instance = value;
                 AllSingletons[typeof(T)] = value;
             }
         }

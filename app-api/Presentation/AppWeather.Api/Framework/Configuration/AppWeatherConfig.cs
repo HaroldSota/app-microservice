@@ -2,25 +2,36 @@
 
 namespace AppWeather.Api.Framework.Configuration
 {
+    /// <inheritdoc cref="IAppWeatherConfig" />
     public class AppWeatherConfig : BaseConfigurationProvider, IAppWeatherConfig
     {
-
+        /// <summary>
+        ///     AppWeatherConfig ctor.
+        /// </summary>
+        /// <param name="configuration"></param>
         public AppWeatherConfig(IConfiguration configuration)
             : base(configuration, "AppWeatherConfig")
         {
         }
 
+        /// <inheritdoc />
         public bool IsTesting => base.GetConfiguration<bool>("IsTesting");
 
         private string _userSearchCookie;
-        public string UserSearchCookie => _userSearchCookie ??= base.GetConfiguration<string>("UserSearchCookie");
+
+        /// <inheritdoc />
+        public string UserSearchCookie => _userSearchCookie ??= GetConfiguration<string>("UserSearchCookie");
 
 
         private string _dataConnectionString;
-        public string DataConnectionString => _dataConnectionString ??= base.GetConfiguration<string>("DataConnectionString");
+
+        /// <inheritdoc />
+        public string DataConnectionString => _dataConnectionString ??= GetConfiguration<string>("DataConnectionString");
 
 
         private IConfigurationSection _bindings;
-        public IConfigurationSection Bindings => _bindings ??= base.GetSection("Bindings");
+
+        /// <inheritdoc />
+        public IConfigurationSection Bindings => _bindings ??= GetSection("Bindings");
     }
 }

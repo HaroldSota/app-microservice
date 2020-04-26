@@ -9,12 +9,12 @@ namespace AppWeather.IntegrationTest.Infrastructure
 {
     public abstract class ControllerTestBase : IClassFixture<TestServerFixture>
     {
-        protected readonly TestServerFixture _fixture;
+        protected readonly TestServerFixture Fixture;
         private string _controllerPath;
 
         public ControllerTestBase(TestServerFixture fixture, string controllerPath)
         {
-            _fixture = fixture;
+            Fixture = fixture;
             _controllerPath = controllerPath;
         }
 
@@ -22,19 +22,19 @@ namespace AppWeather.IntegrationTest.Infrastructure
         {
             var properties = from p in obj.GetType().GetProperties()
                              where p.GetValue(obj, null) != null
-                             select p.Name + "=" + HttpUtility.UrlEncode(p.GetValue(obj, null).ToString());
+                             select p.Name + "=" + HttpUtility.UrlEncode(p.GetValue(obj, null)?.ToString());
 
             return string.Join("&", properties.ToArray());
         }
 
         protected async Task<HttpResponseMessage> GetAsync(string action)
         {
-            return await _fixture.Client.GetAsync($"{_controllerPath}{action}");
+            return await Fixture.Client.GetAsync($"{_controllerPath}{action}");
         }
 
         protected async Task<HttpResponseMessage> GetAsync(string action, object obj)
         {
-            return await _fixture.Client.GetAsync($"{_controllerPath}{action}?{GetQueryString(obj)}");
+            return await Fixture.Client.GetAsync($"{_controllerPath}{action}?{GetQueryString(obj)}");
         }
     }
 }

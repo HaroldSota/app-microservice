@@ -5,6 +5,10 @@
     /// </summary>
     public interface IUserSearchRepository
     {
-        void Add(UserSearch folder);
+        /// <summary>
+        ///     Inserts a new record in the UserSearch table
+        /// </summary>
+        /// <param name="userSearch"></param>
+        void Add(UserSearch userSearch);
     }
 }

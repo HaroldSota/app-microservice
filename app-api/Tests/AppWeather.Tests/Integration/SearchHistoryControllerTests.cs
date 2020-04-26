@@ -8,6 +8,7 @@ using System;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using AppWeather.Api.Persistence.Model.UserSearch;
 using Xunit;
 namespace AppWeather.Tests.Integration
 {

@@ -7,17 +7,11 @@ namespace AppWeather.Api.Domain
     /// </summary>
     public abstract class BaseEntity
     {
-        /// <summary>
-        ///     Domain base entity ctor.
-        /// </summary>
-        protected BaseEntity() : this(Guid.NewGuid())
-        {
-        }
 
         /// <summary>
         ///     Domain base entity ctor.
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="id">The entity identifier</param>
         protected BaseEntity(Guid id)
         {
             Id = id;

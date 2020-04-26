@@ -4,6 +4,7 @@ using AppWeather.Api.ExternalServices.Google;
 using AppWeather.Api.ExternalServices.OpenWeatherMap;
 using AppWeather.Api.Persistence;
 using AppWeather.Api.Persistence.Model;
+using AppWeather.Api.Persistence.Model.UserSearch;
 using Autofac;
 using Microsoft.EntityFrameworkCore;
 

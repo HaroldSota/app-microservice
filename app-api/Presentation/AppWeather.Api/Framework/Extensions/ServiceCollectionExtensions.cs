@@ -77,7 +77,8 @@ namespace AppWeather.Api.Framework.Extensions
             {
                 foreach (var instance in instances)
                 {
-                    cfg.AddProfile(instance.GetType());
+                    if (instance != null) 
+                        cfg.AddProfile(instance.GetType());
                 }
             });
 

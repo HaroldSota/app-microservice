@@ -3,24 +3,27 @@ using System.Threading.Tasks;
 
 namespace AppWeather.Api.ExternalServices.OpenWeatherMap
 {
+    /// <summary>
+    ///     OpenWeatherMapApiService implemented api actions 
+    /// </summary>
     public interface IOpenWeatherMapApiService
     {
         /// <summary>
-        /// Get forecast by city name
+        ///     Get forecast by city name
         /// </summary>
         /// <param name="cityName">The city name to</param>
         /// <returns></returns>
         Task<ApiResponse<Forecast, Error>> GetForecastByCityName(string cityName);
 
         /// <summary>
-        /// Get forecast by zip code
+        ///     Get forecast by zip code
         /// </summary>
         /// <param name="zipCode">The zipcode</param>
         /// <returns></returns>
         Task<ApiResponse<Forecast, Error>> GetForecastByZipCode(string zipCode);
 
         /// <summary>
-        /// Get forecast by coordinate
+        ///     Get forecast by coordinate
         /// </summary>
         /// <param name="lat">The latitude</param>
         /// <param name="lon">The longitude</param>

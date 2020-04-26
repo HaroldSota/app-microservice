@@ -1,16 +1,24 @@
 ﻿using AppWeather.Api.Domain.UserSearchModel;
 
-namespace AppWeather.Api.Persistence.Model
+namespace AppWeather.Api.Persistence.Model.UserSearch
 {
+    /// <inheritdoc />
     public sealed class UserSearchRepository : IUserSearchRepository
     {
-        private readonly IBaseRepository<UserSearch, UserSearchData> _baseRepository;
+        private readonly IBaseRepository<Domain.UserSearchModel.UserSearch, UserSearchData> _baseRepository;
 
-        public UserSearchRepository(IBaseRepository<UserSearch, UserSearchData> baseRepository)
+
+        /// <summary>
+        ///     UserSearchRepository ctor.
+        /// </summary>
+        /// <param name="baseRepository">The base repository containing all the CRUD actions</param>
+        public UserSearchRepository(IBaseRepository<Domain.UserSearchModel.UserSearch, UserSearchData> baseRepository)
         {
             _baseRepository = baseRepository;
         }
-        public void Add(UserSearch userSearch)
+
+        /// <inheritdoc />
+        public void Add(Domain.UserSearchModel.UserSearch userSearch)
         {
             _baseRepository.Add(userSearch);
         }

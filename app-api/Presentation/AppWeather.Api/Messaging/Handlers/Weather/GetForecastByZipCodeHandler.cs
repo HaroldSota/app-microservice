@@ -86,7 +86,7 @@ namespace AppWeather.Api.Messaging.Handlers.Weather
         {
             if (query == null)
                 this.Errors.Add("Error: Query parameter is null!");
-            if (string.IsNullOrEmpty(query.ZipCode))
+            else  if (string.IsNullOrEmpty(query.ZipCode))
                 this.Errors.Add("Error:Zip Code is empty!");
             else if (!Regex.IsMatch(query.ZipCode, "^(?!01000|99999)(0[1-9]\\d{3}|[1-9]\\d{4})$"))
                 this.Errors.Add($"{query.ZipCode} is not a valid German zip code! Germany has 5 digits always from 01001 up to 99998.");

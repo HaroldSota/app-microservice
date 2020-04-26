@@ -15,7 +15,7 @@ namespace AppWeather.Api.Persistence
         DbSet<TEntity> Set<TEntity>() where TEntity : class, new();
 
         /// <summary>
-        /// Saves all changes made in this context to the database
+        ///     Saves all changes made in this context to the database
         /// </summary>
         /// <returns>The number of state entries written to the database</returns>
         int SaveChanges();

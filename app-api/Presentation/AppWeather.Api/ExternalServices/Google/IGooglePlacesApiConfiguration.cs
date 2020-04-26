@@ -2,6 +2,9 @@
 
 namespace AppWeather.Api.ExternalServices.Google
 {
+    /// <summary>
+    ///     GooglePlacesApiConfiguration interface
+    /// </summary>
     public interface IGooglePlacesApiConfiguration : IBindingConfiguration
     {
     }

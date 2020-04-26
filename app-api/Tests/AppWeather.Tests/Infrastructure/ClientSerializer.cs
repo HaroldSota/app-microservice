@@ -4,10 +4,10 @@ namespace AppWeather.Tests.Infrastructure
 {
     public static class ClientSerializer
     {
-        private static readonly JsonSerializerOptions serializerOptions;
+        private static readonly JsonSerializerOptions SerializerOptions;
         static ClientSerializer()
         {
-            serializerOptions = new JsonSerializerOptions
+            SerializerOptions = new JsonSerializerOptions
             {
                 IgnoreNullValues = true
             };
@@ -15,12 +15,12 @@ namespace AppWeather.Tests.Infrastructure
 
         public static T Deserialize<T>(string jsonString)
         {
-            return JsonSerializer.Deserialize<T>(jsonString, serializerOptions);
+            return JsonSerializer.Deserialize<T>(jsonString, SerializerOptions);
         }
 
         public static string Serialize<T>(T @object)
         {
-            return JsonSerializer.Serialize(@object, serializerOptions);
+            return JsonSerializer.Serialize(@object, SerializerOptions);
         }
     }
 }
