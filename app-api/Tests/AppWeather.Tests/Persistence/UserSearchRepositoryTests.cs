@@ -1,12 +1,11 @@
 ﻿using AppWeather.Api.Framework;
 using AppWeather.Api.Domain.UserSearchModel;
-using AppWeather.IntegrationTest.Infrastructure;
-using AppWeather.Api.Persistence.Model;
 using AppWeather.Tests.Infrastructure;
 using FluentAssertions;
 using System;
 using System.Linq;
 using AppWeather.Api.Persistence.Model.UserSearch;
+using AppWeather.Tests.Integration;
 using Xunit;
 
 namespace AppWeather.Tests.Persistence

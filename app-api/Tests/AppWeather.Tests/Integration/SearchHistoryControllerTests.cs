@@ -1,7 +1,5 @@
 ﻿using AppWeather.Api.Messaging.Model;
 using AppWeather.Api.Messaging.Model.SearchHistory;
-using AppWeather.IntegrationTest.Infrastructure;
-using AppWeather.Api.Persistence.Model;
 using AppWeather.Tests.Infrastructure;
 using FluentAssertions;
 using System;

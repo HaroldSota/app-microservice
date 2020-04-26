@@ -1,7 +1,5 @@
 using AppWeather.Api.Messaging.Model;
 using AppWeather.Api.Messaging.Model.Weather;
-using AppWeather.IntegrationTest.Infrastructure;
-using AppWeather.Api.Persistence.Model;
 using AppWeather.Tests.Infrastructure;
 using FluentAssertions;
 using System;

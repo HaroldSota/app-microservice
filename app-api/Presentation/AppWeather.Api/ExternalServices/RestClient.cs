@@ -66,7 +66,6 @@ namespace AppWeather.Api.ExternalServices
                        client => client.GetAsync(uri),
                        async (response, deserializeType) =>
                        {
-
                            // get result type object
                            if (deserializeType.Equals(typeof(TResource)))
                            {
@@ -106,7 +105,12 @@ namespace AppWeather.Api.ExternalServices
                 exception.Data.Add("StatusCode", httpResponse.StatusCode);
                 try
                 {
-                    return new ApiResponse<TResource, TError> { Error = responseReader != null ? (TError)(await responseReader(httpResponse, typeof(TError)).ConfigureAwait(false)) : default };
+                    return new ApiResponse<TResource, TError>
+                    {
+                        Error = responseReader != null 
+                            ? (TError)(await responseReader(httpResponse, typeof(TError)).ConfigureAwait(false)) 
+                            : default
+                    };
                 }
                 catch
                 {
@@ -114,7 +118,12 @@ namespace AppWeather.Api.ExternalServices
                 }
             }
 
-            return new ApiResponse<TResource, TError> { Response = responseReader != null ? (TResource)(await responseReader(httpResponse, typeof(TResource)).ConfigureAwait(false)) : default };
+            return new ApiResponse<TResource, TError>
+            {
+                Response = responseReader != null 
+                    ? (TResource)(await responseReader(httpResponse, typeof(TResource)).ConfigureAwait(false)) 
+                    : default
+            };
         }
     }
 }

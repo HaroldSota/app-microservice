@@ -13,7 +13,7 @@
             <summary>
                Get Suggestion  
             </summary>
-            <param name="cityName">Provide the seatch text</param>
+            <param name="cityName">Provide the search text</param>
             <returns>Return a list of suggestions</returns>
         </member>
         <member name="T:AppWeather.Api.Controllers.SearchHistoryController">
@@ -35,7 +35,7 @@
         </member>
         <member name="T:AppWeather.Api.Controllers.WeatherController">
             <summary>
-                Wather forcast api
+                Weather forecast api
             </summary>
         </member>
         <member name="M:AppWeather.Api.Framework.Controllers.BaseApiController.#ctor(AppWeather.Core.Messaging.IBus)">

@@ -1,7 +1,6 @@
 ﻿using AppWeather.Api.Messaging.Model;
 using AppWeather.Api.Messaging.Model.SearchHistory;
 using AppWeather.Api.Persistence;
-using AppWeather.Api.Persistence.Model;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -13,11 +12,16 @@ using AppWeather.Api.Persistence.Model.UserSearch;
 
 namespace AppWeather.Api.Messaging.Handlers.SearchHistory
 {
+    /// <inheritdoc cref="BaseHandler"/>
     public sealed class GetAllHandler : BaseHandler, IRequestHandler<GetAllRequest, QueryResponse<GetAllResponse[]>>
     {
         private readonly IDbContext _dbContext;
         private List<string> Errors { get; set; } = new List<string>();
 
+        /// <summary>
+        ///     GetAllHandler ctor.
+        /// </summary>
+        /// <param name="dbContext"></param>
         public GetAllHandler(IDbContext dbContext)
         {
             _dbContext = dbContext;

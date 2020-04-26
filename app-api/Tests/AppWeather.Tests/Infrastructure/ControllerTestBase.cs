@@ -1,18 +1,17 @@
-﻿using AppWeather.Tests.Infrastructure;
-using System.Linq;
+﻿using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
 using Xunit;
 
-namespace AppWeather.IntegrationTest.Infrastructure
+namespace AppWeather.Tests.Infrastructure
 {
     public abstract class ControllerTestBase : IClassFixture<TestServerFixture>
     {
         protected readonly TestServerFixture Fixture;
-        private string _controllerPath;
+        private readonly string _controllerPath;
 
-        public ControllerTestBase(TestServerFixture fixture, string controllerPath)
+        protected ControllerTestBase(TestServerFixture fixture, string controllerPath)
         {
             Fixture = fixture;
             _controllerPath = controllerPath;

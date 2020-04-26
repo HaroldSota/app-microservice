@@ -1,5 +1,4 @@
 ﻿using AppWeather.Api.Messaging.Model.Places;
-using AppWeather.IntegrationTest.Infrastructure;
 using AppWeather.Tests.Infrastructure;
 using FluentAssertions;
 using System.Net;

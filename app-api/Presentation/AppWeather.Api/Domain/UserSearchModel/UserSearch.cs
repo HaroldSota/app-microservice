@@ -28,13 +28,29 @@ namespace AppWeather.Api.Domain.UserSearchModel
             SearchTime = searchTime;
         }
 
+        /// <summary>
+        ///     User identifier
+        /// </summary>
         public string UserId { get; private set; }
 
+        /// <summary>
+        ///     Searched city name
+        /// </summary>
         public string CityName { get; private set; }
 
+        /// <summary>
+        ///   Temperature at search time
+        /// </summary>
         public float? Temperature { get; private set; }
 
+        /// <summary>
+        ///     Humidity  at search time
+        /// </summary>
         public int? Humidity { get; private set; }
+
+        /// <summary>
+        ///     Time of search
+        /// </summary>
         public DateTime SearchTime { get; private set; }
     }
 }

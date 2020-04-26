@@ -3,13 +3,15 @@ using AppWeather.Api.Domain.UserSearchModel;
 using AppWeather.Api.ExternalServices.Google;
 using AppWeather.Api.ExternalServices.OpenWeatherMap;
 using AppWeather.Api.Persistence;
-using AppWeather.Api.Persistence.Model;
 using AppWeather.Api.Persistence.Model.UserSearch;
 using Autofac;
 using Microsoft.EntityFrameworkCore;
 
 namespace AppWeather.Api.Framework.Extensions
 {
+    /// <summary>
+    ///     ContainerBuilderExtensions
+    /// </summary>
     public static class ContainerBuilderExtensions
     {
         public static void RegisterApiDependencies(this ContainerBuilder builder, IAppWeatherConfig appWeatherConfig)
