@@ -13,7 +13,7 @@ In order to scale from clean arthitecture to a microservice arthitecture the fol
 8. Decided to mantain the interfaces for the external services and configuration to not lose in coding style.
 
 # The app desing
- The project has 4 abstract layers: api, domain, external serices and persistence.
+ The project has 4 abstract layers: api, domain, external services and persistence.
 
  Each api controller inherit from BaseApiController. In BaseApiController it is defined the routing, and how to interpret the 
  response from the handler in terms of HTTP Status.
